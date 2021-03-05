@@ -12,7 +12,7 @@ const Form = () => {
 
   return (
     <div className="login-box">
-      <form onSubmit={handleSubmit(onSubmit)} data-testid="form">
+      <form onSubmit={handleSubmit(onSubmit)} title="form">
         <h1>Login</h1>
 
         <div className="textbox">
@@ -21,7 +21,6 @@ const Form = () => {
             ref={register({ required: true })}
             placeholder="nome"
             title="name"
-            data-testid="name"
           />
           {errors.nome && <p>Digite seu nome</p>}
         </div>
@@ -32,7 +31,6 @@ const Form = () => {
             ref={register}
             placeholder="cidade"
             title="cidade"
-            data-testid="cidade"
           />
           {errors.cidade && <p>Digite a cidade</p>}
         </div>
@@ -43,7 +41,7 @@ const Form = () => {
             type="email"
             ref={register({ required: true })}
             placeholder="e-mail"
-            data-testid="mail"
+            title="mail"
           />
           {errors.email && <p>Digite seu e-mail</p>}
         </div>
@@ -54,7 +52,7 @@ const Form = () => {
             type="number"
             ref={register({ min: 18, max: 99, required: true })}
             placeholder="idade"
-            data-testid="idade"
+            title="idade"
           />
           {errors.idade && <p>Digite sua idade</p>}
         </div>
@@ -64,7 +62,8 @@ const Form = () => {
             type="checkbox"
             ref={register({ required: true })}
             name="estadoCivil"
-            value="masculino"
+            value="estadoCivil"
+            title='estadoCivil'
           />{" "}
           Estado Civil
         </div>
@@ -75,6 +74,7 @@ const Form = () => {
               name="conjugue"
               ref={register({ required: true })}
               placeholder="Cônjuge"
+              title='Cônjuge'
             />
           </div>
         )}
