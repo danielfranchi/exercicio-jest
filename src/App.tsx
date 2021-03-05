@@ -1,16 +1,12 @@
-import React from 'react'
-import Avatar from './components/Avatar/Avatar'
-import Lista from './components/Lista/Lista'
-import Alert from './components/Alert/Alert'
+import React from "react";
+import Home from "./pages/Home/Home";
 
 const App = () => {
   return (
     <div>
-      <Avatar />
-      <Lista />
-      <Alert />
+      <Home />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
